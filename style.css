@@ -1,0 +1,398 @@
+.header{
+    height: 70px;
+    border-bottom: 1px solid #dddddd;
+}
+.header .logo{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 70px;
+    color: #161616;
+}
+.header .logo img{
+    height: 40px;
+    margin: 10px 20px;
+    float: left;
+}
+
+.header .menu{
+    float: right;
+}
+
+.header .menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.header .menu ul li{
+    display: inline-block;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    /*-------------transition: 0.3s all ease-in-out;——不加这个代码，否则在切换tab时，选中条在切换时会有黑边的闪烁情况*/
+}
+.header .menu ul li a{
+    text-decoration: none;
+    color: #aaaaaa;
+    line-height: 70px;
+    padding: 0 20px;
+    font-size: 16px;
+    /*---------------transition: 0.5s all ease-in-out;——不要加这个代码，否则在切换tab时，tab会出现变换动画*/
+}
+.header .menu ul li:hover {
+    border-bottom: 2px solid #2647ff;
+}
+.header .menu ul li:hover a{
+    color: #161616;
+}
+
+.header .menu ul li.active{
+    border-bottom: 2px solid #2647ff;
+}
+.header .menu ul li.active a{
+    color: #161616;
+    font-weight: bold;
+}
+
+/*--------------welcome-----------------*/
+
+.welcome{
+    text-align: center;
+    padding: 10vh 0;
+}
+.welcome h1{
+    font-size: 52px;
+    color: #333;
+    margin: 0;
+}
+.welcome p{
+    color: #333;
+    font-size: 22px;
+}
+
+
+/*--------------works-----------------*/
+
+.works{
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto 100px;
+    padding: 10px;
+}
+a.work{
+    letter-spacing: normal;
+    text-decoration: none;
+    /*transition: 0.8s all ease-in-out;*/
+}
+a.work .inner{
+    padding: 10px;
+}
+.work .top{
+    height: 260px;
+    background-position: center;
+    background-size: cover;
+}
+.work .bottom {
+    padding: 10px 10px 6px;
+    background-color: #ffffff;
+    /*transition: 0.5s all ease-in-out;*/
+}
+.work .bottom .title{
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #161616;
+    
+}
+.work .bottom .tag{
+    font-size: 14px;
+    color: #666666;
+    
+
+}
+
+a.work:hover .title{
+    color: #ffffff;
+}
+a.work:hover .tag{
+    color: #ffffff;
+}
+a.work:hover .bottom{
+    background-color: #161616;
+}
+
+/*--------------footer-------------*/
+
+.footer{
+    background: #fcfcfc;
+}
+.footer .top{
+    padding: 40px;
+    text-align: center;
+}
+.footer .top h3{
+    color: #333333;
+    font-size: 22px;
+
+}
+.footer .top .boxs{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 0;
+    color: #666666;
+    font-size: 14px;
+}
+.footer .bottom{
+    padding: 20px;
+    border-top: 1px solid #dedede;
+    font-size: 12px;
+    color: #999999;
+    overflow: auto;
+}
+.footer .bottom .name{
+    float: left;
+    opacity: 0;
+}
+.footer .bottom .by{
+    text-align: center;
+}
+.footer .bottom .by span{
+    font-size: 14px;
+    color: #f38181;
+}
+.header .mobile-btn{
+    display: none;
+}
+.switch{
+    display: none;
+}
+
+
+/*------------------移动端------------------------*/
+
+
+@media screen and (max-width: 480px) {
+    .header .mobile-btn{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        line-height: 60px;
+    }
+
+.welcome{
+    padding: 20vh 0;
+}
+    .welcome h1{
+        font-size: 32px;
+        color: #333;
+        margin: 0;
+    }
+
+    .header .menu{
+        width: 100%;
+        background-color: #fafafa;
+    }
+    .header .menu ul{
+        display: block;
+    }
+    .header .menu ul li{
+        width: 25%;
+        float: left;
+        text-align: center;
+    }
+    .header .menu ul li a{
+        line-height: 50px;
+        padding: 0;
+    }
+
+    .switch{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .switch:checked+.s-list{
+        display: none;
+    }
+  }
+
+
+
+
+
+
+/*------------------about-------------------*/
+
+.about-cover{
+    background-size: cover;
+    background-position: center;
+}
+
+  .introduce{
+      text-align: center;
+      padding: 160px 0;
+      color: white;
+  }
+  
+  .content{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto 60px;
+    overflow: auto;
+  }
+  .avatar{
+    text-align: center;
+    padding: 80px 0;
+ 
+  }
+  .avatar img{
+    border-radius: 50%;
+  }
+
+
+.info{
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.8;
+    display: block;
+    overflow: auto;
+ 
+    
+}
+.half{
+    padding: 2%;
+    width: 46%;
+    float: left;
+}
+.half .left{
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.half .right{
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.half img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+/*--------------glaaery------------------------*/
+
+.introduce h1{
+    font-size: 48px; /*所有的h1*/
+}
+.photos{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 160px;
+}
+.photos .photo{
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.photos .photo .title::before{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    top: -10px;
+    transition: 0.3s all ease-in-out;
+}
+.photos .photo:hover .title::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    top: -10px;
+}
+.photos .photo .title{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 30px;
+    font-weight:bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.photos .photo .date{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 100px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+.photos .photo .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+.photos .photo:hover .mask{
+    background: #000000;
+    opacity: .5;
+}
+.photos .photo:hover .date{
+    opacity: 1;
+}
+
+
+/*------------------------blog----------------------*/
+
+.blog-cover{
+    background-size: cover;
+    background-position: center;
+}
+.articles{
+    max-width: 720px;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.article{
+   border-bottom: 1px solid #dedede;
+   padding: 30px 0 10px;
+}
+.article h1{
+    font-size: 32px;
+    color: #161616;
+}
+.article span{
+    font-size: 13px;
+    color: #666666;
+}
+.article p{
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+}
+.page-nav{
+    text-align: center;
+    padding: 40px 0;
+}
+.page-nav a{
+    text-decoration: none;
+    color: #999999;
+}
+.page-nav a:hover{
+    text-decoration: none;
+    color: #161616;
+}
